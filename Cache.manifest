@@ -1,7 +1,6 @@
 CACHE MANIFEST 
 
 CACHE: 
-
 back.png
 blob.js
 fakeusb.js
@@ -11,6 +10,7 @@ hen213b.js
 index.html
 jb.js
 netcat.js
+orbistoolbox.js
 payload.html
 images\fakeusb.png
 images\ftp.png
@@ -21,13 +21,14 @@ images\linux_3.png
 images\mira.png
 images\netcat.png
 images\netcatL.png
+images\orbis.png
 linux\1gb.js
 linux\3gb.js
 mira\mira.js
 mira\mira2.js
-webkit-7.50\int64.js
-webkit-7.50\ps4.js
-webkit-7.50\utils.js
+webkit\int64.js
+webkit\ps4.js
+webkit\utils.js
 
 NETWORK: 
 * 
