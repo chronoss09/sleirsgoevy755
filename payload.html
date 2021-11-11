@@ -1,21 +1,21 @@
 <html>
-<body onload="go()">
-<script>
-if(document.cookie.indexOf('kex=0') >= 0)
-    document.location.href = 'index.html';
-	document.cookie = 'kex=0';
-</script>
+<body style="text-align:center;" onload="go()">
 <script>
 function print(){}
-</script>
-<script src="common/exploit.js"></script>
-<script src="common/helpers.js"></script>
-<script src="common/malloc.js"></script>
-<script src="common/rop.js"></script>
-<script src="common/syscalls.js"></script>
-<script src="common/syscalls2.js"></script>
-<script src="jb.js"></script>
-<script>
+
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
 function getHashParams()
 {
     var ans = {};
@@ -29,32 +29,51 @@ function getHashParams()
     return ans;
 }
 
-function loadScript(path)
+function done()
 {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', path, false);
-    xhr.send('');
-    eval.call(window, xhr.responseText);
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("✔ You're all set !!! ✔");
+        read_ptr_at(0);
+    }
+    else
+        alert("Jailbreak failed! Reboot your PS4 and try again.");
 }
 
-(function()
+window.midExploit = function()
 {
-    var hp = getHashParams();
-    if('p0' in hp)
-        loadScript(hp['p0']);
-    if('p1' in hp)
-        loadScript(hp['p1']);
-})();
-</script>
-<script src="netcat.js"></script>
-<script>
-if(main_ret == 179 /* already hacked */ || main_ret == 0 /* success */)
-{
-    alert("✔ You're all set! ✔");
-    read_ptr_at(0);
+    var params = getHashParams();
+    var scripts = ['blob.js', 'jb.js'];
+    if('p0' in params)
+        scripts.push(params.p0);
+    if('p1' in params)
+        scripts.push(params.p1);
+    scripts.push('netcat.js');
+    preloadScripts(scripts, go);
 }
-else
-    alert("ECHEC de chargement du crack. \nRedémarrer la console SVP !!!");
+
+window.postExploit = function()
+{
+    history.pushState({}, '', '.');
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 100);
+};
 </script>
+<script src="webkit/utils.js"></script>
+<script src="webkit/int64.js"></script>
+<script src="webkit/ps4.js"></script>
+<div style="background-color:#000024;color:white;font-size:20px;text-align:center;">
+<h1 style='font-size:40px;margin:0;text-shadow: 4px 4px 4px #f3c108'> SLEIRSGOEVY 7.5X HOST </h1><i>
+<h3 style='font-size:26px;margin:0;text-shadow: 4px 4px 4px #de0029'>Last update file published by Sleirsgoevy for 7.5X PS4</h3>
+</div><br><br><br>
+<button id="input1" onfocus="handle2()"></button>
+<button id="input2"></button>
+<button id="input3" onfocus="handle2()"></button>
+<select id="select1">
+<option value="value1">Value1</option>
+</select>
 </body>
 </html>
