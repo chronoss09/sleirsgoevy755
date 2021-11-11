@@ -2,23 +2,22 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>PS4 7.5X Jailbreak / Host by Chronoss</title>
+    <title>PS4 6.72 Jailbreak / Host by Chronoss</title>
     <link rel="shortcut icon" href="favicon.ico"></link>
-
+	
 <style>
 	.bg {
 	  background-image:url(back.png);
-	  background-color:#000000;
-	  color:white;
 	  background-attachment: fixed;
 	  background-size:100%;
 	  background-repeat:no-repeat;
+	  background-color:#000000;
 	}
 </style>
 
 </head>   
 <body class="bg">
-<script>
+	<script>
 window.applicationCache.ondownloading = function()
 {
 	alert("Caching started !!!")
@@ -35,15 +34,15 @@ window.applicationCache.oncached = window.applicationCache.onupdateready = funct
 };
 </script>
 <div style="background-color:#000024;color:white;font-size:20px;text-align:center;">
-<h1 style='font-size:40px;margin:0;text-shadow: 4px 4px 4px #f3c108'> SLEIRSGOEVY 7.5X HOST </h1><i>
-<h3 style='font-size:26px;margin:0;text-shadow: 4px 4px 4px #de0029'>Last update file published by Sleirsgoevy for 7.5X PS4</h3>
+<h1 style='font-size:40px;margin:0;text-shadow: 4px 4px 4px #f3c108'> SLEIRSGOEVY 6.72 HOST </h1><i>
+<h3 style='font-size:26px;margin:0;text-shadow: 4px 4px 4px #de0029'>Last update file published by Sleirsgoevy for 6.72 PS4</h3>
 <hr>
 </div>
-    <div id="english" class="language" style="display: block">
+    <div id="english" class="language" style="display: block;color:white;">
         <h3 style="color:red;text-align:center;">READ THIS CAREFULLY BEFORE PROCEEDING</h3>
-        <p><b>In case you're dumb: this ONLY works on FW 7.5x. If you are on 6.72, go
+        <p><b>In case you're dumb: this ONLY works on FW 6.72. If you are on 7.00-7.02, go
                 <a href="https://sleirsgoevy.github.io/ps4jb/index702.html">here</a>. If you
-                are on 7.00-7.02, go <a href="https://sleirsgoevy.github.io/ps4jb2/75x/">here</a>.
+                are on 7.50-7.55, go <a href="https://sleirsgoevy.github.io/ps4jb2/75x/">here</a>.
                 <font color="red">If you are on a higher firmware (e.g. 9.00), you can test the Webkit from
 				<a href="Webkit_9.0/index.html">here</a></font>.</b></p>
         <ol>
@@ -58,36 +57,32 @@ window.applicationCache.oncached = window.applicationCache.onupdateready = funct
                 If the system crashes (looks like instant powerdown), press the power button on the PS4 (NOT on the
                 gamepad) until it turns on again, then retry.
             </li>
-            <li><font color="blue">If you get a <b>"There is not enough free system memory"</b> message without any pop-ups, then it means that the webkit
-                exploit has failed. <b>Click OK and retry</b></font>.</li>
             <li><b>For advanced users:</b> To load your own payloads using <b>NetCat</b>, run <b>NETCAT</b> and send the
                 payload to <b>TCP port 9021 (9020 for the legacy version)</b>.</li>
         </ol>
-		<center><b><p><i>Credits: Synacktiv team for the WebKit exploit, @theflow for vulnerability disclosure & hints, &lt;anonymous&gt; for 7.5X kernel dump, @codedwrench for ps4-kexec (Linux loader) kernel offsets</i></p></b>
-	</div>
+        <p><i>This exploit <b>does</b> crash and hang. Sometimes you even have to retry 10 times to get the
+                jailbreak.</i></p>
+        <p><i>Credits: <b>@theflow</b> for vulnerability disclosure</i></p>
+    </div>
 
-<div style="background-color:#000024;border-radius:20px;position:fixed;left:150;bottom:251px;width:80%;text-align:center;">
-<a href="payload.html#p0=mira/mira.js&p1=hen213b.js"><img src="images/hen.png" id="Image2" alt=""></a>
+<br>
+<div style="background-color:#000024;border-radius:20px;position:fixed;left:398;bottom:168px;width:50%;text-align:center;">
+<a href="payload.html#p0=mira/mira.js&p1=mira/mira2.js"><img src="images/mira.png" id="Image1" alt=""></a>
+<a href="payload.html#p0=mira/mira.js&p1=hen.js"><img src="images/hen.png" id="Image2" alt=""></a>
 <a href="payload.html#p0=mira/mira.js&p1=goldhen.js"><img src="images/gold.png" id="Image3" alt=""></a>
+<a href="payload.html#p0=mira/mira.js&p1=ftp.js"><img src="images/ftp.png" id="Image6" alt=""></a>
+<a href="payload.html#p0=mira/mira.js&p1=orbis.js"><img src="images/orbis.png" id="Image10" alt=""></a><br>
 <a href="payload.html#p0=mira/mira.js&p1=linux/1gb.js"><img src="images/linux_1.png" id="Image4" alt=""></a>
 <a href="payload.html#p0=mira/mira.js&p1=linux/3gb.js"><img src="images/linux_3.png" id="Image5" alt=""></a>
-<a href="payload.html#p0=mira/mira.js&p1=ftp.js"><img src="images/ftp.png" id="Image6" alt=""></a>
 <a href="payload.html#p0=mira/mira.js&p1=fakeusb.js"><img src="images/fakeusb.png" id="Image7" alt=""></a>
 <a href="payload.html"><img src="images/netcatL.png" id="Image8" alt=""></a>
 <a href="payload.html#p0=mira/mira.js"><img src="images/netcat.png" id="Image9" alt=""></a>
-<a href="payload.html#p0=mira/mira.js&p1=orbistoolbox.js"><img src="images/orbis.png" id="Image10" alt=""></a>
 </div>
 
-<div style="position:fixed;left:0;bottom:168px;width:100%;text-align:center;color:white;font-size:40px;"> <span id=passCounter></span> &nbsp; : &nbsp; <span id=failCounter></span></div>
-
-	<div style="background-color:#ff0000;border-radius:50px;position:fixed;left:387;bottom:51px;width:50%;text-align:center;color:white;">
-        <p><b><i>This exploit does many crash and hang. Sometimes you even have to retry 10 times to get the jailbreak.
-		This error is not going to harm your console.
-		<br>Success rate here is about 10%, so don't worry and continue...</i></b></p>
-    </div>
+<div style="position:fixed;left:0;bottom:85px;width:100%;text-align:center;color:white;font-size:40px;"> <span id=passCounter></span> &nbsp; : &nbsp; <span id=failCounter></span></div>
 
 <div style="background-color:#000024;color:white;position:fixed;left:0;bottom:-15px;width:100%;text-align:center;">
-<i><font id="progress" style='font-size:16px;margin:0;text-shadow: 4px 4px 4px #de0029'>SLEIRSGOEVY PS4EXPLOIT HOST 7.5X BY CHRONOSS</i></font></p>
+<i><font id="progress" style='font-size:16px;margin:0;text-shadow: 4px 4px 4px #de0029'>SLEIRSGOEVY PS4EXPLOIT HOST 6.72 BY CHRONOSS</i></font></p>
 </div>
 <script>
 if (localStorage.passcount == null) localStorage.passcount=0;
